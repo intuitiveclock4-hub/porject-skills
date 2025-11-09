@@ -3,8 +3,24 @@
 .container{max-width:1100px;margin:0 auto;padding:1.25rem}
 .site-header{background:#fff;box-shadow:0 1px 2px rgba(2,6,23,0.06);position:sticky;top:0;z-index:40}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;gap:0.75rem;align-items:center}
-.logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+}
+
 .site-header h1{margin:0;font-size:1.05rem}
 .nav a{margin-left:1rem;text-decoration:none;color:var(--muted)}
 .nav .btn{background:var(--accent-2);color:#fff;padding:0.55rem 0.9rem;border-radius:8px;text-decoration:none}

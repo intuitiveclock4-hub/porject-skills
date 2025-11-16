@@ -1,27 +1,35 @@
-:root{
-  --bg:#003399;       /* background color */
-  --card:#ffffff;     /* white boxes */
-  --accent:#0ea5a4;
-  --accent-2:#4f46e5;
-  --muted:#ffffff;    /* muted text white */
+/* =======================
+   COLOR VARIABLES
+   ======================= */
+:root {
+  --bg: #003399;       /* royal blue background */
+  --card: #ffffff;     /* white content boxes */
+  --accent: #0ea5a4;
+  --accent-2: #4f46e5;
+  --muted: #ffffff;    /* muted text is white */
 }
 
-*{box-sizing:border-box}
+/* =======================
+   GLOBAL
+   ======================= */
+* { box-sizing: border-box; }
 
 body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background-color: #003399;  /* royal blue */
+  background-color: #003399;
   margin: 0;
-  color: white !important;    /* default text color */
+  color: white !important;  /* all normal text white */
 }
 
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:1.25rem;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
 }
 
-/* HEADER */
+/* =======================
+   HEADER
+   ======================= */
 .site-header {
   background-color: #00804d; /* dark green */
   color: white;
@@ -41,11 +49,10 @@ body {
   color: #00804d;
 }
 
-/* HEADER LAYOUT */
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
@@ -66,13 +73,164 @@ body {
   display: block;
 }
 
-/* NAV */
+.site-header h1 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
 .nav a {
   margin-left: 1rem;
   text-decoration: none;
   color: white !important;
 }
 
-.nav .btn{
-  backgr
+/* =======================
+   HERO
+   ======================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* =======================
+   BUTTONS
+   ======================= */
+.cta { margin-top: 1rem; }
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid rgba(15,23,42,0.06);
+  color: var(--accent-2);
+}
+
+/* =======================
+   FEATURES / LISTS
+   ======================= */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.features li {
+  background: var(--card);
+  padding: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(2,6,23,0.04);
+}
+
+/* =======================
+   SECTIONS & GRID
+   ======================= */
+.section { padding: 2rem 0; }
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* =======================
+   CARDS (WHITE BOXES)
+   ======================= */
+.card {
+  background: #ffffff !important;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card.wide { grid-column: 1 / -1; }
+
+/* FORCE card text BLACK */
+.card, 
+.card * {
+  color: black !important;
+}
+
+/* =======================
+   FORMS
+   ======================= */
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #e6e9ee;
+  border-radius: 8px;
+  margin-top: 0.35rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eef2f7;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.small { font-size: 0.9rem; }
+
+/* =======================
+   RESPONSIVE
+   ======================= */
+@media(max-width:900px) {
+  .hero { grid-template-columns: 1fr; gap: 1rem; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .nav { display: none; }
+}
+
 

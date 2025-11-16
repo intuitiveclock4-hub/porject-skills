@@ -2,11 +2,11 @@
    COLOR VARIABLES
    ======================= */
 :root {
-  --bg: #003399;       /* royal blue background */
-  --card: #ffffff;     /* white content boxes */
+  --bg: #003399;        /* royal blue */
+  --card: #ffffff;      /* white boxes */
   --accent: #0ea5a4;
   --accent-2: #4f46e5;
-  --muted: #ffffff;    /* muted text is white */
+  --muted: #ffffff;     /* muted text is white */
 }
 
 /* =======================
@@ -16,9 +16,9 @@
 
 body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background-color: #003399;
+  background-color: var(--bg);
   margin: 0;
-  color: white !important;  /* all normal text white */
+  color: white !important;
 }
 
 .container {
@@ -46,7 +46,7 @@ body {
 
 .site-header .btn {
   background-color: white;
-  color: #00804d;
+  color: #00804d !important;
 }
 
 .header-inner {
@@ -61,31 +61,15 @@ body {
   gap: 16px;
 }
 
-.logo {
-  flex-shrink: 0;
-}
-
 .logo img {
   height: 45px;
   width: auto;
-  object-fit: contain;
   border-radius: 4px;
-  display: block;
-}
-
-.site-header h1 {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
-.nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: white !important;
+  object-fit: contain;
 }
 
 /* =======================
-   HERO
+   HERO SECTION
    ======================= */
 .hero {
   display: grid;
@@ -120,7 +104,7 @@ body {
 .btn {
   display: inline-block;
   background: var(--accent);
-  color: #fff;
+  color: #fff !important;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   text-decoration: none;
@@ -128,12 +112,12 @@ body {
 
 .btn.outline {
   background: transparent;
-  border: 1px solid rgba(15,23,42,0.06);
-  color: var(--accent-2);
+  border: 1px solid rgba(255,255,255,0.7);
+  color: white !important;
 }
 
 /* =======================
-   FEATURES / LISTS
+   HERO FEATURE BOXES
    ======================= */
 .features {
   list-style: none;
@@ -145,10 +129,11 @@ body {
 }
 
 .features li {
-  background: var(--card);
+  background: var(--card) !important;
   padding: 0.9rem;
   border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(2,6,23,0.04);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  color: black !important;
 }
 
 /* =======================
@@ -171,22 +156,26 @@ body {
 }
 
 /* =======================
-   CARDS (WHITE BOXES)
+   WHITE CARD BOXES
    ======================= */
 .card {
-  background: #ffffff !important;
+  background: var(--card) !important;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  color: black !important; /* make entire box text black */
+}
+
+.card *,
+.card h3,
+.card h4,
+.card h5,
+.card p,
+.card li {
+  color: black !important;
 }
 
 .card.wide { grid-column: 1 / -1; }
-
-/* FORCE card text BLACK */
-.card, 
-.card * {
-  color: black !important;
-}
 
 /* =======================
    FORMS
@@ -200,25 +189,20 @@ body {
 .form textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 1px solid #e6e9ee;
+  border: 1px solid #556;
   border-radius: 8px;
   margin-top: 0.35rem;
-}
-
-.form-actions {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
 }
 
 /* =======================
    FOOTER
    ======================= */
 .site-footer {
-  background: #fff;
+  background: #ffffff;
   border-top: 1px solid #eef2f7;
   padding: 1rem 0;
   margin-top: 2rem;
+  color: black !important;
 }
 
 .small { font-size: 0.9rem; }
@@ -232,5 +216,3 @@ body {
   .grid-2 { grid-template-columns: 1fr; }
   .nav { display: none; }
 }
-
-

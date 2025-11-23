@@ -1,24 +1,24 @@
-/* =======================
-   COLOR VARIABLES
-   ======================= */
+/* ---------- THEME COLORS ---------- */
 :root {
-  --bg: #003399;        /* royal blue */
-  --card: #ffffff;      /* white boxes */
+  --bg: #003399;           /* Royal blue background */
+  --header: #00804d;       /* Dark green header */
+  --card: #ffffff;         /* White cards */
+  --text: #ffffff;         /* Default text (white) */
+  --text-dark: #000000;    /* Text inside cards (black) */
   --accent: #0ea5a4;
   --accent-2: #4f46e5;
-  --muted: #ffffff;     /* muted text is white */
 }
 
-/* =======================
-   GLOBAL
-   ======================= */
-* { box-sizing: border-box; }
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   background-color: var(--bg);
   margin: 0;
-  color: white !important;
+  color: var(--text);
 }
 
 .container {
@@ -27,26 +27,14 @@ body {
   padding: 1.25rem;
 }
 
-/* =======================
-   HEADER
-   ======================= */
+/* ---------- HEADER ---------- */
 .site-header {
-  background-color: #00804d; /* dark green */
+  background-color: var(--header);
   color: white;
   box-shadow: 0 1px 2px rgba(2,6,23,0.1);
   position: sticky;
   top: 0;
   z-index: 40;
-}
-
-.site-header a {
-  color: white !important;
-  text-decoration: none;
-}
-
-.site-header .btn {
-  background-color: white;
-  color: #00804d !important;
 }
 
 .header-inner {
@@ -65,12 +53,20 @@ body {
   height: 45px;
   width: auto;
   border-radius: 4px;
-  object-fit: contain;
 }
 
-/* =======================
-   HERO SECTION
-   ======================= */
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white !important;
+}
+
+.nav .btn {
+  background: white;
+  color: var(--header);
+}
+
+/* ---------- HERO ---------- */
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -92,19 +88,28 @@ body {
   margin: 0 0 0.5rem;
 }
 
-.muted {
-  color: var(--muted);
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
 }
 
-/* =======================
-   BUTTONS
-   ======================= */
-.cta { margin-top: 1rem; }
+.features li {
+  background: var(--card);
+  padding: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(2,6,23,0.04);
+  color: var(--text-dark);  /* <<< KEEP TEXT BLACK */
+}
 
+/* ---------- BUTTONS ---------- */
 .btn {
   display: inline-block;
   background: var(--accent);
-  color: #fff !important;
+  color: #fff;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   text-decoration: none;
@@ -112,34 +117,14 @@ body {
 
 .btn.outline {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.7);
-  color: white !important;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
 }
 
-/* =======================
-   HERO FEATURE BOXES
-   ======================= */
-.features {
-  list-style: none;
-  padding: 0;
-  margin: 1.25rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 2rem 0;
 }
-
-.features li {
-  background: var(--card) !important;
-  padding: 0.9rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  color: black !important;
-}
-
-/* =======================
-   SECTIONS & GRID
-   ======================= */
-.section { padding: 2rem 0; }
 
 .grid-3 {
   display: grid;
@@ -155,64 +140,80 @@ body {
   margin-top: 1rem;
 }
 
-/* =======================
-   WHITE CARD BOXES
-   ======================= */
+/* ---------- CARDS ---------- */
 .card {
-  background: var(--card) !important;
+  background: var(--card);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  color: black !important; /* make entire box text black */
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+  color: var(--text-dark); /* <<< ALL CARD TEXT BLACK */
 }
 
-.card *,
-.card h3,
-.card h4,
-.card h5,
-.card p,
-.card li {
-  color: black !important;
+.card.wide {
+  grid-column: 1 / -1;
 }
 
-.card.wide { grid-column: 1 / -1; }
-
-/* =======================
-   FORMS
-   ======================= */
+/* ---------- FORMS ---------- */
 .form label {
   display: block;
   margin-bottom: 0.5rem;
+  color: var(--text-dark);
 }
 
 .form input,
 .form textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 1px solid #556;
+  border: 1px solid #e6e9ee;
   border-radius: 8px;
   margin-top: 0.35rem;
 }
 
-/* =======================
-   FOOTER
-   ======================= */
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* ---------- PRIMARY RESEARCH IMAGES ---------- */
+.primary-images {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.primary-images img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- FOOTER ---------- */
 .site-footer {
-  background: #ffffff;
+  background: white;
+  color: black;
   border-top: 1px solid #eef2f7;
   padding: 1rem 0;
   margin-top: 2rem;
-  color: black !important;
 }
 
-.small { font-size: 0.9rem; }
+.small {
+  font-size: 0.9rem;
+}
 
-/* =======================
-   RESPONSIVE
-   ======================= */
-@media(max-width:900px) {
-  .hero { grid-template-columns: 1fr; gap: 1rem; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-2 { grid-template-columns: 1fr; }
-  .nav { display: none; }
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
+  }
 }

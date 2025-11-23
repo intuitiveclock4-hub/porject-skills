@@ -6,10 +6,16 @@
   <title>RethinkSchools</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- ===========================
+            HEADER
+  ============================ -->
   <header class="site-header">
     <div class="container header-inner">
-     <div class="brand">
+
+      <div class="brand">
         <div class="logo">
           <img src="Projetc%20skills%20logo.jpg" alt="Rethink Schools Logo">
         </div>
@@ -24,26 +30,32 @@
         <a href="#research">Research</a>
         <a href="#results">Results</a>
         <a href="#resources">Resources</a>
-        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="nav-btn">Contact</a>
       </nav>
+
     </div>
   </header>
 
+  <!-- ===========================
+            HERO
+  ============================ -->
   <main class="container">
+
     <section id="home" class="hero">
       <div class="hero-text">
         <h2>Improving student wellbeing at school</h2>
         <p>A project that collects student voice, research and practical ideas to make schools safer, happier and more supportive.</p>
+
         <div class="cta">
           <a href="#research" class="btn">Explore research</a>
           <a href="#contact" class="btn outline">Get involved</a>
         </div>
 
         <ul class="features">
-          <li><strong>Mental health support</strong><br><span>Guides on counselling, apps & referrals</span></li>
-          <li><strong>Reduce pressure</strong><br><span>Classroom & policy changes to lower stress</span></li>
-          <li><strong>Social environment</strong><br><span>Clubs & events that build belonging</span></li>
-          <li><strong>Student voice</strong><br><span>Include students in decisions</span></li>
+          <li><strong>Mental health support</strong><br>Guides on counselling, apps & referrals</li>
+          <li><strong>Reduce pressure</strong><br>Classroom & policy changes to lower stress</li>
+          <li><strong>Social environment</strong><br>Clubs & events that build belonging</li>
+          <li><strong>Student voice</strong><br>Include students in decisions</li>
         </ul>
       </div>
 
@@ -52,36 +64,52 @@
       </div>
     </section>
 
+
+    <!-- ===========================
+              RESEARCH
+    ============================ -->
     <section id="research" class="section">
       <h3>What we researched</h3>
       <p>This project combined secondary research with a student survey to identify what matters most for wellbeing at school.</p>
 
       <div class="grid-3">
+
+        <!-- SECONDARY RESEARCH -->
         <article class="card">
           <h4>Secondary research</h4>
           <p>Summary of literature and reputable resources on mental health and positive school environments.</p>
+          <img src="Secondary1.jpg" class="research-img">
+          <img src="Secondary2.jpg" class="research-img">
         </article>
 
-        <!-- ★★★★★ PRIMARY RESEARCH WITH IMAGES INSERTED ★★★★★ -->
+        <!-- PRIMARY RESEARCH -->
         <article class="card">
           <h4>Primary research</h4>
           <p>A Google Form collected student responses about stress, support and improvements.</p>
 
-          <div class="primary-images">
-            <img src="Teachers.jpg" alt="Teacher Listening Chart">
-            <img src="Stressed.jpg" alt="Stress Levels Chart">
-            <img src="Atmosphere.jpg" alt="School Atmosphere Chart">
-            <img src="Advice.jpg" alt="Student Advice Responses">
-          </div>
+          <!-- Inserted images you provided -->
+          <img src="Teachers.jpg" class="research-img">
+          <img src="Stressed.jpg" class="research-img">
+          <img src="Atmosphere.jpg" class="research-img">
+          <img src="Advice.jpg" class="research-img">
         </article>
 
+        <!-- DESIGN IDEAS -->
         <article class="card">
           <h4>Design ideas</h4>
           <p>Prototype ideas: app, posters and a dedicated support hub.</p>
+          <img src="Design1.jpg" class="research-img">
+          <img src="Design2.jpg" class="research-img">
+          <img src="Design3.jpg" class="research-img">
         </article>
+
       </div>
     </section>
 
+
+    <!-- ===========================
+              RESULTS
+    ============================ -->
     <section id="results" class="section">
       <h3>Key findings</h3>
       <div class="grid-2">
@@ -92,28 +120,37 @@
       </div>
     </section>
 
+
+    <!-- ===========================
+              RESOURCES
+    ============================ -->
     <section id="resources" class="section">
       <h3>Resources & ideas</h3>
+
       <div class="grid-2">
-        <div class="card"><h4>Support Hub</h4><p>Create a single page with counselling details, helplines, self-help guides and recommended apps.</p></div>
+        <div class="card"><h4>Support Hub</h4><p>Create a page with counselling info, helplines, self-help and recommended apps.</p></div>
         <div class="card"><h4>Events & clubs</h4><p>Field day, movie nights, baking, music, sport and student-run socials.</p></div>
-        <div class="card wide"><h4>Poster & app ideas</h4><p>Use consistent colours and simple infographics to explain app features and how students can access support.</p></div>
+        <div class="card wide"><h4>Poster & app ideas</h4><p>Use consistent colours and simple infographics to explain support services.</p></div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
+
+    <!-- ===========================
+              CONTACT
+    ============================ -->
+    <section id="contact" class="section">
       <h3>Get involved</h3>
       <p>If you'd like this project customised for your school or exported as a standalone site, contact the team below.</p>
+
       <div class="grid-2">
-        <form id="contactForm" class="card form">
-          <label>Your name<input type="text" name="name" placeholder="Name"></label>
-          <label>Email<input type="email" name="email" placeholder="you@example.com"></label>
-          <label>Message<textarea name="message" rows="4" placeholder="How can we help?"></textarea></label>
+        <form class="card form">
+          <label>Your name<input type="text" placeholder="Name"></label>
+          <label>Email<input type="email" placeholder="you@example.com"></label>
+          <label>Message<textarea rows="4" placeholder="How can we help?"></textarea></label>
           <div class="form-actions">
-            <button type="submit" class="btn">Send message</button>
-            <a class="btn outline" href="#">Download report (PDF)</a>
+            <button class="btn">Send message</button>
+            <a class="btn outline">Download report (PDF)</a>
           </div>
-          <p class="muted small">This form does not actually send email in this static demo.</p>
         </form>
 
         <aside class="card">
@@ -123,13 +160,15 @@
             <li><strong>Design:</strong> Everybody</li>
             <li><strong>Presentation:</strong> Deona & Qistina</li>
           </ul>
-          <h5>Artefact ideas</h5>
-          <p class="small muted">Poster series, student app prototype, support hub page and school wellbeing event pack.</p>
         </aside>
       </div>
     </section>
+
   </main>
 
+  <!-- ===========================
+              FOOTER
+  ============================ -->
   <footer class="site-footer">
     <div class="container">
       <div>© 2025 School Wellbeing Project</div>
@@ -137,6 +176,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
+

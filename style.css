@@ -1,203 +1,239 @@
-/* ROOT VARIABLES */
-:root {
-  --bg: #003399;       /* Royal blue background */
-  --card: #ffffff;
-  --accent: #0ea5a4;
-  --accent-2: #4f46e5;
-  --muted: #d9e4f8;
-}
+/* ===================== GLOBAL ===================== */
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: Inter, Arial, sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #222;
 }
 
-/* CONTAINER */
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.25rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ================= HEADER ================= */
+/* ===================== HEADER ===================== */
+
 .site-header {
-  background-color: #00804d;
+  background: #007a4d;
+  padding: 20px 0;
   color: white;
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 50;
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-
-.logo img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
+  gap: 15px;
 }
 
 .brand h1 {
-  margin: 0;
-  font-size: 1.25rem;
+  font-size: 26px;
 }
 
-.brand .muted {
-  margin: 0;
-  color: #e3e3e3;
-  font-size: 0.8rem;
+.muted {
+  opacity: 0.8;
 }
 
-/* NAV LINKS */
 .nav a {
   color: white;
+  margin-left: 25px;
+  font-size: 16px;
   text-decoration: none;
-  margin-left: 20px;
-  font-size: 1rem;
 }
 
-/* CONTACT BUTTON */
 .nav-btn {
   background: white;
-  color: #00804d !important;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.2s ease;
+  color: #007a4d;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-.nav-btn:hover {
-  background: #e6e6e6;
-}
+/* ===================== HERO ===================== */
 
-/* ================= HERO ================= */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 2rem;
-  align-items: center;
-  padding: 3rem 0;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 12px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 60px 0;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
-  margin: 0 0 0.5rem;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-.features {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 0.75rem;
-  margin-top: 1rem;
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.features li {
-  background: var(--card);
-  color: black;
-  padding: 0.9rem;
-  border-radius: 10px;
+.cta {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
 }
 
-/* BUTTONS */
 .btn {
-  background: var(--accent);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
+  background: #007a4d;
   color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
 }
 
 .btn.outline {
   background: transparent;
-  border: 1px solid #fff;
-  color: white;
+  border: 2px solid #007a4d;
+  color: #007a4d;
 }
 
-/* ================= SECTIONS ================= */
+.features {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 12px;
+}
+
+/* ===================== SECTIONS ===================== */
+
 .section {
-  padding: 2rem 0;
+  padding: 60px 0;
+}
+
+.section h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 .card {
-  background: var(--card);
-  color: black;
-  padding: 1rem;
-  border-radius: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+
+/* ===================== PRIMARY RESEARCH IMAGES ===================== */
+
+.primary-box .primary-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.primary-box img {
+  width: 100%;
+  border-radius: 10px;
+  background: white;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ===================== SECONDARY RESEARCH IMAGES ===================== */
+
+.secondary-box .secondary-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.secondary-box img {
+  width: 100%;
+  border-radius: 10px;
+  background: white;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ===================== RESOURCES ===================== */
 
 .card.wide {
-  grid-column: 1 / -1;
+  grid-column: span 2;
 }
 
-/* ================= PRIMARY RESEARCH IMAGES ================= */
-.primary-box .primary-images {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  margin-top: 10px;
+/* ===================== CONTACT FORM ===================== */
+
+.form label {
+  display: block;
+  margin-bottom: 12px;
 }
 
-.primary-box .primary-images img {
+.form input,
+.form textarea {
   width: 100%;
-  background: white;
-  padding: 8px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  margin-top: 6px;
 }
 
-/* ================= FOOTER ================= */
-.site-footer {
-  background: white;
-  padding: 1rem 0;
-  color: black;
-  margin-top: 2rem;
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .small {
-  font-size: 0.8rem;
+  font-size: 13px;
 }
 
-/* MOBILE */
+/* ===================== FOOTER ===================== */
+
+.site-footer {
+  background: #007a4d;
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
   }
-  .grid-3, .grid-2 {
+  .grid-3 {
     grid-template-columns: 1fr;
   }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .card.wide {
+    grid-column: span 1;
+  }
 }
-

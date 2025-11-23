@@ -1,15 +1,36 @@
-/* ===========================
-        HEADER + NAVBAR
-=========================== */
+/* ROOT VARIABLES */
+:root {
+  --bg: #003399;       /* Royal blue background */
+  --card: #ffffff;
+  --accent: #0ea5a4;
+  --accent-2: #4f46e5;
+  --muted: #d9e4f8;
+}
 
-.site-header {
-  background-color: #00804d;   /* dark green */
+* { box-sizing: border-box; }
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
   color: white;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  background-color: #00804d;
+  color: white;
+  padding: 12px 0;
   position: sticky;
   top: 0;
   z-index: 50;
-  padding: 12px 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 .header-inner {
@@ -28,22 +49,20 @@
   height: 48px;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
 }
 
 .brand h1 {
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .brand .muted {
   margin: 0;
-  font-size: 0.85rem;
   color: #e3e3e3;
+  font-size: 0.8rem;
 }
 
-/* Nav links */
+/* NAV LINKS */
 .nav a {
   color: white;
   text-decoration: none;
@@ -51,17 +70,134 @@
   font-size: 1rem;
 }
 
-/* CONTACT BUTTON — fully restored */
+/* CONTACT BUTTON */
 .nav-btn {
-  background-color: white;
+  background: white;
   color: #00804d !important;
   padding: 8px 16px;
   border-radius: 10px;
   font-weight: 600;
-  transition: 0.15s ease;
-  display: inline-block;
+  transition: 0.2s ease;
 }
 
 .nav-btn:hover {
-  background-color: #e6e6e6;
+  background: #e6e6e6;
 }
+
+/* ================= HERO ================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.features li {
+  background: var(--card);
+  color: black;
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+/* BUTTONS */
+.btn {
+  background: var(--accent);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: white;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 2rem 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card.wide {
+  grid-column: 1 / -1;
+}
+
+/* ================= PRIMARY RESEARCH IMAGES ================= */
+.primary-box .primary-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.primary-box .primary-images img {
+  width: 100%;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: white;
+  padding: 1rem 0;
+  color: black;
+  margin-top: 2rem;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+

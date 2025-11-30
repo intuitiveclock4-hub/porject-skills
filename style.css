@@ -37,7 +37,7 @@ body {
 }
 
 .nav a {
-  margin-left: 15px;
+  margin-left: 20px;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -46,8 +46,17 @@ body {
 .contact-btn {
   background: white;
   color: var(--header) !important;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 8px;
+  border: 2px solid var(--header);
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background: var(--header);
+  color: white !important;
+  border: 2px solid white;
+  transition: 0.3s ease;
 }
 
 /* HERO */
@@ -170,12 +179,18 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
 }
 
 .btn.outline {
   background: transparent;
   border: 2px solid var(--header);
   color: var(--header);
+}
+
+.btn:hover {
+  background: #006633;
+  transition: 0.3s ease;
 }
 
 /* FOOTER */

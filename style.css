@@ -76,9 +76,10 @@ body {
 .primary-images,
 .secondary-images {
   margin-top: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column; /* stack vertically */
   gap: 12px;
+  align-items: center; /* optional: center images */
 }
 
 .primary-images img,

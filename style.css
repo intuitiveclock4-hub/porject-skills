@@ -1,41 +1,49 @@
-.design-images img,
-.primary-images img,
-.secondary-images img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 10px;
+:root {
+  --bg: #003399;
+  --header: #00804d;
+  --card: #ffffff;
+  --text: #ffffff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.25rem;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--header);
+  color: white;
+  padding: 10px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  border-radius: 6px;
+}
+
+.nav a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-btn {
   background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card h4 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  color: #00804d;
-}
-
-.card p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.features li {
-  margin-bottom: 10px;
-}
-
-.features strong {
-  color: #ffffff;
-}
-
-.hero-text p,
-.section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+  color: var(--header) !important;
+  padding: 6px

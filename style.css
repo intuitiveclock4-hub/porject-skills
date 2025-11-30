@@ -72,9 +72,10 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* PRIMARY + SECONDARY IMAGE BOXES */
+/* IMAGE BOXES */
 .primary-images,
-.secondary-images {
+.secondary-images,
+.design-images {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -86,30 +87,4 @@ body {
 .secondary-images img {
   width: 100%;
   height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  background: white;
-}
-
-/* DESIGN IMAGE BOXES */
-.design-images {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
-.design-images img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 10px;
-  background: white;
-}
-
-/* GRID layouts */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 
+  object-fit:
